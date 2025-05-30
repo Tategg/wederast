@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AeroForm Composites | Core Innovations</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #0066cc;
+            --secondary: #003366;
+            --accent: #00aaff;
+            --dark: #1a1a2e;
+            --light: #f8f9fa;
+        }
+        
+        /* Industrial-grade card design */
+        .innovation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            padding: 50px 10%;
+            background: linear-gradient(to bottom, #f8f9fa 0%, #e9ecef 100%);
+        }
+        
+        .tech-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border-top: 4px solid var(--accent);
+        }
+        
+        .tech-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 106, 255, 0.15);
+        }
+        
+        .card-header {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .card-header img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .tech-card:hover .card-header img {
+            transform: scale(1.05);
+        }
+        
+        .card-icon {
+            position: absolute;
+            bottom: -30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            box-shadow: 0 5px 15px rgba(0, 170, 255, 0.3);
+        }
+        
+        .card-body {
+            padding: 30px;
+        }
+        
+        .card-body h3 {
+            color: var(--secondary);
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .card-body p {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+        
+        .tech-specs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .spec-tag {
+            background: rgba(0, 170, 255, 0.1);
+            color: var(--primary);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .cta-link {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+        }
+        
+        .cta-link i {
+            margin-left: 5px;
+            transition: transform 0.3s;
+        }
+        
+        .cta-link:hover i {
+            transform: translateX(5px);
+        }
+        
+        /* Micro-interactions */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .tech-card:nth-child(1) .card-icon {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        .tech-card:nth-child(2) .card-icon {
+            animation: float 3s ease-in-out infinite 0.5s;
+        }
+        
+        .tech-card:nth-child(3) .card-icon {
+            animation: float 3s ease-in-out infinite 1s;
+        }
+    </style>
+</head>
+<body>
+    <section class="innovation-grid">
+        <!-- Card 1: Carbon Fiber -->
+        <div class="tech-card">
+            <div class="card-header">
+                <img src="https://images.unsplash.com/photo-1616486338815-1af673f4e6d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Carbon Fiber Weaving">
+                <div class="card-icon">
+                    <i class="fas fa-atom"></i>
+                </div>
+            </div>
+            <div class="card-body">
+                <h3>Advanced Carbon Fiber Layups</h3>
+                <div class="tech-specs">
+                    <span class="spec-tag">+40% Stiffness</span>
+                    <span class="spec-tag">Shock Absorption</span>
+                    <span class="spec-tag">Dynamic Loading</span>
+                </div>
+                <p>Proprietary weaving patterns optimized for specific load cases, delivering unprecedented strength-to-weight ratios in structural applications.</p>
+                <a href="#" class="cta-link">See Case Studies <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+        
+        <!-- Card 2: Recyclable Composites -->
+        <div class="tech-card">
+            <div class="card-header">
+                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Recyclable Materials">
+                <div class="card-icon">
+                    <i class="fas fa-recycle"></i>
+                </div>
+            </div>
+            <div class="card-body">
+                <h3>Thermoformable & Recyclable Composites</h3>
+                <div class="tech-specs">
+                    <span class="spec-tag">Closed-Loop</span>
+                    <span class="spec-tag">80% Recyclable</span>
+                    <span class="spec-tag">Low VOC</span>
+                </div>
+                <p>Breakthrough resin systems that maintain aerospace performance while enabling end-of-life material recovery and reprocessing.</p>
+                <a href="#" class="cta-link">Sustainability Report <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+        
+        <!-- Card 3: Resin Infusion -->
+        <div class="tech-card">
+            <div class="card-header">
+                <img src="https://images.unsplash.com/photo-1581093450021-4a7360e9a6a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Resin Infusion">
+                <div class="card-icon">
+                    <i class="fas fa-flask"></i>
+                </div>
+            </div>
+            <div class="card-body">
+                <h3>Precision Resin Infusion Systems</h3>
+                <div class="tech-specs">
+                    <span class="spec-tag">-30% Voids</span>
+                    <span class="spec-tag">300°C Stable</span>
+                    <span class="spec-tag">Fast Cure</span>
+                </div>
+                <p>Patented vacuum-assisted resin transfer molding (VARTM) technology for flawless composite consolidation in complex geometries.</p>
+                <a href="#" class="cta-link">Technical White Paper <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Enhanced interactivity
+        document.querySelectorAll('.tech-card').forEach(card => {
+            card.addEventListener('click', (e) => {
+                if (!e.target.closest('a')) {
+                    card.querySelector('a').click();
+                }
+            });
+            
+            // Hover gradient effect
+            card.addEventListener('mouseenter', () => {
+                card.style.background = 'linear-gradient(to bottom, white 0%, #f5fbff 100%)';
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.background = 'white';
+            });
+        });
+    </script>
+</body>
+</html>
